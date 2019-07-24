@@ -9,6 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <url>http://127.0.0.2</url>
+        <uname>user</uname>
+        <upass>user123</upass>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <aspectj.version>1.8.10</aspectj.version>
@@ -81,6 +84,20 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                         	<systemProperties>
+                                   			<property>
+							<name>seleniumUname</name>
+							<value>${uname}</value>
+						</property>
+						<property>
+							<name>seleniumUpass</name>
+							<value>${upass}</value>
+						</property>
+						<property>
+							<name>seleniumURL</name>
+							<value>${url}</value>
+						</property>
+                            </systemProperties>
                     <suiteXmlFiles>
                         <suiteXmlFile>
                             <!--${project.basedir}/src/test/resources/testng.xml-->
