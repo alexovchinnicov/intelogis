@@ -15,6 +15,9 @@ import java.util.concurrent.TimeUnit;
 public class ZadanieTest {
 
 private static final String String = null;
+private static String DefaultURL = System.getProperty("seleniumURL");
+private static String DefaultUname = System.getProperty("seleniumUname");
+private static String DefaultUpass = System.getProperty("seleniumUpass");
 
     @BeforeClass/* Метод, выполняющийся перед началом тест-сьюта */
     public void begin() {
@@ -49,10 +52,10 @@ private static final String String = null;
     @Test(priority = 1)
     public void TestMy() {
 //    	Подключиться к системе
-    	open("ююю");
+    	open(DefaultURL);
 //    	авторизоваться
-    	setEmailField("ююю");    	
-    	setPasswordField("ююю");   
+    	setEmailField(DefaultUname);    	
+    	setPasswordField(DefaultUpass);   
     	clickEnterButton();
 //    	создать проект с именем Test_текущиеврея (вставить текущие время)    	
     	clickNewProject();    
