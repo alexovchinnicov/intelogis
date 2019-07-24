@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FrontEnd Test Suite">
+    <test name="ILS Plan UI Test">
+        <classes>
+            <class name="ZadanieTest">
+                <methods>
+                    <include name="planCalculation" />
+                    <include name="deleteTripPoint" />
+                    <include name="createSchedulerProfile" />
+                    <include name="importData" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
