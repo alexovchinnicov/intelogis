@@ -27,6 +27,9 @@ private static String DefaultUpass = System.getProperty("seleniumUpass");
         ChromeOptions options = new ChromeOptions();  //создать обьект для установки опций браузера хром
         options.addArguments("--disable-infobars");   //убрать в браузере полосу infobars
         options.addArguments("--disable-dev-tools");  //отключить в браузере dev-tools
+	options.addArguments("--proxy-server=http://192.168.0.1:3128");  //пробуем по быстрому добавить прокси, что обнаружилась на тестовой виртуалке!
+ 
+	    
         WebDriver myWebDriver = new ChromeDriver(options);  //создать вебдрайвер с  указанными выше опциями
         WebDriverRunner.setWebDriver(myWebDriver); //запуск браузера
         myWebDriver.manage().window().maximize();
